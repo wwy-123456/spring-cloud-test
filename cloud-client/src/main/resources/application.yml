@@ -1,0 +1,20 @@
+server:
+  #定义端口号
+  port: 8767
+spring:
+  application:
+  #定义应用名称，即服务名称
+    name: cloud-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.49.128:8848
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8765/eureka
+  #服务注册中心实例的主机名
+  instance:
+    hostname: 127.0.0.1
+    prefer-ip-address: true
+    instance-id: 127.0.0.1:8767

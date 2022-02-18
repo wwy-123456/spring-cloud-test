@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cloudprovider.test.dao.mybatis.mapper.TestMapper">
+<resultMap id="test" type="com.example.cloudprovider.test.model.Test"></resultMap>
+
+    <select id="queryAll" parameterType="string" resultMap="test">
+        select
+            t1.id as id,
+            t1.name as name
+        from
+            test t1
+        where
+            1=1
+    </select>
+
+</mapper>
